@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "demo for npm version + git flow",
   "scripts": {
-    "preversion": "exit 1",
-    "version": "exit 2",
-    "postversion": "git push && git push --tags"
+    "preversion": "echo 'All tests well done'",
+    "version": "exit 2 && git flow release finish",
+    "postversion": "git push && git push --tags && git checkout develop"
   },
   "repository": {
     "type": "git",
