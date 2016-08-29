@@ -1,0 +1,20 @@
+{
+  "name": "npm-version-git-flow",
+  "version": "0.0.0",
+  "description": "demo for npm version + git flow",
+  "scripts": {
+    "preversion": "exit 1",
+    "version": "exit 2",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dherges/npm-version-git-flow.git"
+  },
+  "author": "David Herges <david@spektrakel.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dherges/npm-version-git-flow/issues"
+  },
+  "homepage": "https://github.com/dherges/npm-version-git-flow#readme"
+}

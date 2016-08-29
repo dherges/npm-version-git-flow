@@ -24,3 +24,12 @@ $ git flow init
 	support = support/
 	versiontag = 
 ```
+
+
+## Order
+
+1. Run the **preversion** script.
+2. Bump version in package.json as requested (patch, minor, major, etc).
+3. Run the **version** script.
+5. Commit and tag.
+6. Run the **postversion** script.
