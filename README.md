@@ -33,3 +33,9 @@ $ git flow init
 3. Run the **version** script.
 5. Commit and tag.
 6. Run the **postversion** script.
+
+
+### Fooo!!!
+
+git flow finish release -> merges & tags
+npm version -> bumps version, commits & tags
