@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "description": "demo for npm version + git flow",
   "scripts": {
-    "preversion": "echo 'All tests well done'",
-    "version": "echo 'Build SUCCEEDED' && git flow release finish %s",
-    "postversion": "git push && git push --tags && git checkout develop",
-    "prepublish": "git checkout master && latesttag=$(git describe --tags) && echo checking out ${latesttag} && git checkout ${latesttag}",
-    "publish": "git checkout develop"
+    "flow:version": "npm version --no-git-tag-version",
+    "flow:publish": "npm publish",
+    "preversion": "git checkout develop",
+    "version": "git flow release start v$npm_package_version",
+    "postversion": "",
+    "prepublish": "git flow release finish v$npm_package_version && git checkout master && latesttag=$(git describe --tags) && echo checking out ${latesttag} && git checkout ${latesttag}",
+    "publish": "echo 'Published $npm_package_version'",
+    "postpublish": "git checkout develop && git push && git push --tags"
   },
   "repository": {
     "type": "git",
