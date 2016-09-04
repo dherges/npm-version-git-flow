@@ -5,7 +5,9 @@
   "scripts": {
     "preversion": "echo 'All tests well done'",
     "version": "echo 'Build SUCCEEDED' && git flow release finish %s",
-    "postversion": "git push && git push --tags && git checkout develop"
+    "postversion": "git push && git push --tags && git checkout develop",
+    "prepublish": "git checkout master && latesttag=$(git describe --tags) && echo checking out ${latesttag} && git checkout ${latesttag}",
+    "publish": "git checkout develop"
   },
   "repository": {
     "type": "git",
